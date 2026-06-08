@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    color: #333;
+}
+html{
+    scroll-behavior: smooth;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: index 1;
+}
+
+.brand {
+    text-decoration: none;
+    font-size: 30px;
+    color: #000;
+    font-weight: 700;
+}
+
+.navlinks {
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    gap: 20px;
+}
+
+.link {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.link:hover {
+    color: #ff0000;
+}
+
+#check {
+    display: none;
+}
+
+.icons {
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 5%;
+}
+
+.hero {
+    display: flex;
+    padding: 160px 8%;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: center;
+}
+
+.productHead {
+    font-size: 40px;
+}
+
+.price {
+    margin-bottom: 15px;
+}
+
+
+.banner {
+    margin: 0px 8% 60px 8%;
+    padding: 0px 40px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('./images/living_room.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    background-attachment: fixed;
+}
+
+.aboutHead {
+    font-size: 35px;
+    margin-bottom: 40px;
+    color: #f2f2f2;
+}
+
+.aboutPara {
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: #d2d2d2;
+}
+
+.aboutPara {
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: #d2d2d2;
+}
+
+.aboutButton {
+    font-weight: 500;
+    font-size: 18px;
+    background-color: #ff0000;
+}
+
+.contact {
+    height: 200px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 0px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.contactHead,
+.subscribeHead {
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #635140;
+}
+
+.socialIcons {
+    margin-top: 20px;
+}
+
+.smLink {
+    color: #635140;
+    margin-right: 20px;
+}
+
+.contactHead,
+.subscribeHead {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.box {
+    display: flex;
+}
+
+.subInput {
+    padding: 10px;
+    width: 300px;
+    border: solid 1px #000;
+}
+
+.subButton {
+    background-color: #635140;
+    color: #fff;
+}
+
+.footer {
+    padding: 15px;
+    color: #000;
+    text-align: center;
+    background-color: rgb(199, 111, 129);
+}
+
+@media(max-width:768px) {
+    .navbar {
+        padding: 20px 5%;
+    }
+
+    .navlinks {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #f5f5f5;
+        height: 0;
+        flex-direction: column;
+        display: none;
+    }
+
+    #check:checked~.navlinks {
+        display: block;
+    }
+
+    .links {
+        text-align: center;
+        padding: 5px 0;
+    }
+
+    .icons {
+        display: flex;
+    }
+
+    #cancelIcon {
+        display: none;
+    }
+
+    #check:checked~.icons #menuIcon {
+        display: block;
+    }
+
+    #check:checked~.icons #cancelIcon {
+        display: none;
+    }
+
+    #heroTitle {
+        font-size: 35px;
+    }
+
+    .banner, .contact {
+        height: fit-content;
+        padding: 20px 8%;
+    }
+}
