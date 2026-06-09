@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
@@ -41,18 +42,15 @@
     <section id="home" class="hero">
         <div class="heroText">
             <h1 id="heroTitle">
-                Modern Furnoture for your home
+                Modern Furniture for your home
             </h1>
-            <p id="heroPara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptate aut, molestiae
-                ipsa voluptatem, eaque consequuntur iure quibusdam earum, consectetur facere quos similique illo ut
-                dicta in suscipit? Itaque, quaerat!
-                Assumenda rem deleniti natus? Fugiat distinctio repellat maiores quibusdam veritatis nesciunt,
-                exercitationem harum voluptatum minima quo impedit ipsa, ipsum alias officia eveniet atque reiciendis.
-                Officiis, sit? Ducimus exercitationem facilis laborum?</p>
+            <p id="heroPara">
+                Discover stylish and comfortable furniture for your living room, bedroom and office.</p>
             <button class="heroButton">Shop Now</button>
         </div>
-        <div class="heroImage">
-            <img id="furnitureImage" src="" alt="no image">
+        <div data-aos="fade-up"
+     data-aos-duration="3000" class="heroImage">
+            <img id="furnitureImage" src="./images/office_space.png" alt="no image">
         </div>
     </section>
     <!-- product section -->
@@ -84,7 +82,7 @@
             </div>
           <!-- subscribe -->
            <div class="subscribe">
-            <h3 class="subscribeHead">Join our Email List</h3>
+            <h3 data-aos="flip-left" class="subscribeHead">Join our Email List</h3>
             <div class="box">
                 <input type="text" placeholder="Email" class="subInput">
             <button class="subButton">Subscribe</button>
@@ -96,5 +94,8 @@
             <p> &copy;  May 2026 by Luminar Technolabs. </p>
         </footer>
 </body>
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </html>

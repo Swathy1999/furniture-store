@@ -21,7 +21,7 @@ html{
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: index 1;
+    z-index: 1;
 }
 
 .brand {
@@ -58,6 +58,7 @@ html{
     cursor: pointer;
     position: absolute;
     right: 5%;
+    display:none;
 }
 
 .hero {
@@ -196,9 +197,7 @@ html{
         padding: 5px 0;
     }
 
-    .icons {
-        display: flex;
-    }
+  
 
     #cancelIcon {
         display: none;
@@ -215,6 +214,7 @@ html{
     #heroTitle {
         font-size: 35px;
     }
+ 
 
     .banner, .contact {
         height: fit-content;
