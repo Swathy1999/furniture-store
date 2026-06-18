@@ -4,24 +4,22 @@
     font-family: "Roboto", sans-serif;
 }
 
-body {
-    background: #f5f5f5;
-    color: #333;
-}
-html{
+html {
     scroll-behavior: smooth;
 }
+
 .navbar {
+    background-color: #ffffff;
+    color: #222222;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 8%;
-    background: #ffffff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: fixed;
-    width: 100%;
     top: 0;
+    width: 100%;
     z-index: 1;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .brand {
@@ -31,11 +29,23 @@ html{
     font-weight: 700;
 }
 
+#check {
+    display: none;
+}
+
+.icons {
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 5%;
+    display: none;
+}
+
 .navlinks {
+    list-style-type: none;
     display: flex;
-    text-decoration: none;
-    list-style: none;
-    gap: 20px;
+    flex-direction: row;
+    gap: 15px;
 }
 
 .link {
@@ -49,35 +59,92 @@ html{
     color: #ff0000;
 }
 
-#check {
-    display: none;
-}
-
-.icons {
-    font-size: 30px;
-    cursor: pointer;
-    position: absolute;
-    right: 5%;
-    display:none;
-}
-
 .hero {
     display: flex;
     padding: 160px 8%;
-    justify-content: space-between;
-    gap: 40px;
     align-items: center;
+    gap: 40px;
+    justify-content: space-between;
 }
 
+.heroText {
+    flex: 1;
+    animation: fadeIn 1.5 ease;
+}
+
+.heroImage {
+    flex: 1;
+}
+
+#heroTitle {
+    font-size: 48px;
+    margin-bottom: 28px;
+}
+
+.heroButton {
+    padding: 12px 25px;
+    border: none;
+    background-color: brown;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.heroButton:hover {
+    background-color: #000;
+    transform: scale(1.05);
+}
+
+#heroPara {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+#furnitureImage {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.products{
+    padding:0px 8% 60px 8%;
+    text-align:center;
+}
 .productHead {
-    font-size: 40px;
+    font-size: 35px;
+    margin-bottom:40px;
 }
 
+.productContainer{
+    display: flex;
+    gap:25px;
+    justify-content:center;
+    flex-wrap:wrap; 
+}
+.card{
+background: #ffffff;
+width:300px;
+padding:20px;
+border-radius:15px;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+transition: 0.3s;
+}
+.card:hover{
+    transform: translateY(-10px);
+}
+
+.cardImg{
+    width:100%;
+    height:220px;
+    border-radius:20px;
+    object-fit:cover;
+}
+.productName{
+    margin:15px 0 10px;
+}
 .price {
     margin-bottom: 15px;
 }
-
-
 .banner {
     margin: 0px 8% 60px 8%;
     padding: 0px 40px;
@@ -144,11 +211,7 @@ html{
     margin-right: 20px;
 }
 
-.contactHead,
-.subscribeHead {
-    font-size: 16px;
-    font-weight: 300;
-}
+
 
 .box {
     display: flex;
@@ -171,53 +234,81 @@ html{
     text-align: center;
     background-color: rgb(199, 111, 129);
 }
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
 
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
 @media(max-width:768px) {
     .navbar {
         padding: 20px 5%;
     }
 
-    .navlinks {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: #f5f5f5;
-        height: 0;
-        flex-direction: column;
-        display: none;
+    .brand,
+    .icons {
+        font-size: 20px;
     }
 
-    #check:checked~.navlinks {
-        display: block;
+    .icons {
+        display: flex;
     }
-
-    .links {
-        text-align: center;
-        padding: 5px 0;
-    }
-
-  
 
     #cancelIcon {
         display: none;
     }
 
     #check:checked~.icons #menuIcon {
-        display: block;
-    }
-
-    #check:checked~.icons #cancelIcon {
         display: none;
     }
 
-    #heroTitle {
-        font-size: 35px;
+    #check:checked~.icons #cancelIcon {
+        display: block;
     }
- 
 
-    .banner, .contact {
+    .navlinks {
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        left: 0px;
+        background-color: rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        height: 0px;
+        display: none;
+    }
+
+    #check:checked~.navlinks {
+        display: block;
+        height: fit-content;
+    }
+
+    .links {
+        text-align: center;
+        margin: 1.5rem 0px;
+    }
+    .hero{
+        flex-direction: column;
+        text-align: center;
+    }
+    #heroTitle{
+    font-size: 38px;
+    }
+    
+    .banner,
+    .contact {
         height: fit-content;
         padding: 20px 8%;
     }
+    .contactHead,
+.subscribeHead {
+    font-size: 16px;
+    font-weight: 300;
+}
 }

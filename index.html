@@ -18,13 +18,15 @@
 <body>
     <!-- navbar -->
     <nav class="navbar">
+        <!-- brand -->
         <a class="brand" href="">
             <i class="fa-solid fa-couch"></i>
             <span class="brandName">IFurniture</span>
         </a>
         <!-- checkbox -->
-        <input type="checkbox" id="check">
-        <label for="check" class="icons">
+          <input type="checkbox" id="check">
+      <!-- label include 2 icons -->
+       <label for="check" class="icons">
             <!-- menu icon -->
             <i id="menuIcon" class="fa-solid fa-bars"></i>
             <!-- /close icon -->
@@ -38,8 +40,9 @@
             <li class="links"><a href="#contact" class="link">Contact</a></li>
         </ul>
     </nav>
-    <!-- hero -->
+    <!-- hero section -->
     <section id="home" class="hero">
+    <!-- text -->
         <div class="heroText">
             <h1 id="heroTitle">
                 Modern Furniture for your home
@@ -48,13 +51,37 @@
                 Discover stylish and comfortable furniture for your living room, bedroom and office.</p>
             <button class="heroButton">Shop Now</button>
         </div>
-        <div data-aos="fade-up"
-     data-aos-duration="3000" class="heroImage">
+        <!-- image -->
+        <div  class="heroImage">
             <img id="furnitureImage" src="./images/office_space.png" alt="no image">
         </div>
     </section>
     <!-- product section -->
-    <section id="products" class="products"></section>
+   <section id="products" class="products">
+    <!-- product container -->
+     <h2 class="productHead">Our Products</h2>
+     <div class="productContainer">
+      <!-- card 1 -->
+      <div class="card">
+        <img src="./images/living_room.png"alt="" class="cardImg" alt="noImg">
+        <h3 class="productName">Wooden chair</h3>
+        <p class="price">$ 120</p>
+        <button class="heroButton">Buy Now</button>
+      </div>
+      <div class="card">
+        <img src="./images/living_room.png" alt="" class="cardImg" alt="noImg">
+        <h3 class="productName">Luxury Sofa</h3>
+        <p class="price">$ 240</p>
+        <button class="heroButton">Buy Now</button>
+      </div>
+      <div class="card">
+        <img src="./images/living_room.png" alt="" class="cardImg" alt="noImg">
+        <h3 class="productName">Dining Table</h3>
+        <p class="price">$ 320</p>
+        <button class="heroButton">Buy Now</button>
+      </div>
+     </div>
+   </section>
     <!-- banner -->
     <section id="about" class="banner">
         <h2 class="aboutHead">About Us</h2>
@@ -66,7 +93,7 @@
             Reprehenderit, ad.</p>
            <button class="heroButton aboutButton">Let's Talk</button>
     </section>
-    <!-- footer -->
+    <!-- contact -->
      <section id="contact" class="contact">
        <!-- Contact text -->
             <div class="contactText">
@@ -90,6 +117,8 @@
            </div>
      
      </section>
+    <!-- footer -->
+     
         <footer class="footer">
             <p> &copy;  May 2026 by Luminar Technolabs. </p>
         </footer>
